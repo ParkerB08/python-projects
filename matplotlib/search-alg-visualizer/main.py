@@ -27,10 +27,10 @@ def maze_creation(width, height):
                 grid[cy][cx] |= direction
                 grid[ny][nx] |= d_opp[direction]
 
-                passage_creation_from(cy, cx, grid)
+                passage_creation_from(nx, ny, grid)
 
     passage_creation_from(0, 0, grid)
+    print(grid[:][:])
 
-
-maze = maze_creation(100, 100)
+maze = maze_creation(10, 10)
 
